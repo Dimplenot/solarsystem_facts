@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar System Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a1128;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .fact-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .fact-card:hover {
+            transform: translateX(10px);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amazing Solar System Facts</h1>
+        <div id="facts-container"></div>
+    </div>
+
+    <script>
+        const solarSystemFacts = [
+            "The Sun contains 99.86% of all the mass in our solar system",
+            "Jupiter has the strongest magnetic field of all the planets",
+            "Venus rotates backwards compared to other planets",
+            "A year on Mercury is just 88 Earth days long",
+            "Saturn's rings are mostly made of ice and rock",
+            "Mars has the largest volcano in the solar system - Olympus Mons",
+            "Neptune's winds are the fastest in the solar system, reaching 2,100 km/h",
+            "Uranus rotates on its side, like a rolling ball",
+            "The Sun is actually white, not yellow - it only appears yellow through Earth's atmosphere",
+            "Pluto is smaller than Earth's moon",
+            "Jupiter has at least 79 moons",
+            "The solar system is about 4.6 billion years old",
+            "Light from the Sun takes about 8 minutes to reach Earth",
+            "Saturn is the only planet that could float in water (if there was a pool big enough)",
+            "The asteroid belt contains millions of asteroids between Mars and Jupiter",
+            "A day on Venus is longer than its year",
+            "The Great Red Spot on Jupiter is a storm that has been raging for at least 400 years",
+            "Mercury has the most extreme temperature variations of any planet",
+            "Earth is the only planet not named after a god or goddess",
+            "The Sun loses about 4 million tons of mass every second due to fusion reactions"
+        ];
+
+        const factsContainer = document.getElementById('facts-container');
+        
+        solarSystemFacts.forEach((fact, index) => {
+            const factCard = document.createElement('div');
+            factCard.className = 'fact-card';
+            factCard.textContent = `${index + 1}. ${fact}`;
+            factsContainer.appendChild(factCard);
+        });
+    </script>
+</body>
+</html>
